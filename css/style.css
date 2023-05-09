@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+/*
+font-family: 'Kanit', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto', sans-serif;
+*/
+* {
+  box-sizing: border-box;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'Kanit', sans-serif;
+  margin-block: 10px;
+}
+
+h1.title {
+  font-size: 5em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Mono', monospace;
+  margin-block: 10px;
+}
+
+h2.subtitle-big {
+  display: inline-block;
+  font-family: 'Kanit', sans-serif;
+  font-size: 4em;
+  border-bottom: 5px solid #b8ec0b;
+}
+
+h2.subtitle-small {
+  font-size: 1.6em;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  margin-block: 10px;
+  font-size: 1.3em;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/* Navigation */
+
+.navbar {
+  background-color: rgb(0, 0, 0, 0.5);
+  color: #b8ec0b;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+.navbar .logo {
+  height: 70px;
+  filter: drop-shadow(0 0 5px #b8ec0b);
+  transition: all 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.1);
+}
+
+.navbar.navbar-scroll {
+  background-color: #000;
+}
+
+.navbar .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-list li {
+  margin: 0 10px;
+}
+
+.navbar .nav-list li a {
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  display: inline-block;
+  color: #b8ec0b;
+  text-decoration: none;
+  padding: 10px;
+  margin-block: 20px;
+}
+
+.navbar .nav-list li a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+}
+.navbar .nav-list li a.active:before,
+.navbar .nav-list li a:hover:before,
+.navbar .nav-list li a:focus:before {
+  transform: scaleX(1);
+}
+
+/* Navigation end */
+
+/* Cover */
+
+.header .cover-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0 0 10px #000;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  background-image: url('../img/horizontalni_vertikalni_rezervoar.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+/*scroll indicator*/
+.scroll-indicator span {
+  position: absolute;
+  bottom: 52px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.scroll-indicator span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.scroll-indicator span:nth-of-type(2) {
+  bottom: 36px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+.scroll-indicator span:nth-of-type(3) {
+  bottom: 20px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*scroll indicator end*/
+/* Cover end */
+
+/* Common elements */
+
+hr {
+  border: none;
+  border-top: 2px solid #b8ec0b;
+  width: 90%;
+  margin: 30px auto;
+}
+
+section {
+  padding: 2em 0;
+}
+
+/* Common elements end */
+
+/* Homepage */
+/* Main */
+
+.main {
+  text-align: center;
+}
+
+.main .text-holder {
+  width: 70%;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow:  5px 5px 25px #adadad,
+             -5px -5px 25px #ffffff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.main .text-holder:hover {
+  transform: scale(1.02);
+}
+
+.main .description {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #000;
+  background-image: url('../img/vertikalni_rezervoari.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.main .description > div {
+  display: flex;
+}
+
+.main .description > div > div {
+  flex: 50%;
+  padding: 20px;
+}
+
+.main .description > p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main .description a,
+.main .description a:hover,
+.main .description a:focus {
+  color: #fff;
+  position: relative;
+}
+
+.main .description a:before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b8ec0b;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+}
+
+.main .description a:hover:before,
+.main .description a:focus:before {
+  transform: scaleX(1);
+}
+
+/* Main end */
+
+
+
+/* Homepage end */
+
+
+
+
+/* Footer */
+
+.footer {
+  background-color: #000;
+  color: #b8ec0b;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer end */
